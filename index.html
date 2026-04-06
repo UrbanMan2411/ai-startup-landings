@@ -45,7 +45,8 @@
       mix-blend-mode:screen;
     }
     .wrap{width:min(1260px,calc(100% - 28px));margin:0 auto;position:relative;z-index:1}
-    .topbar{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;background:rgba(4,6,10,.58);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.04)}
+    .topbar{position:sticky;top:0;z-index:50;width:100%;background:rgba(4,6,10,.58);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.04)}
+    .topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0}
     .brand{font-family:'Cormorant Garamond',serif;font-size:30px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft)}
     .brand small{display:block;font-family:Inter,sans-serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-top:4px}
     .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
@@ -53,7 +54,7 @@
     .nav button{padding:11px 16px;border-radius:999px;font-size:13px;font-weight:700}
     .nav button.active,.nav button:hover,.tab.active,.tab:hover{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.15)}
 
-    .hero{padding:36px 0 30px}
+    .hero{padding:48px 0 34px}
     .hero-shell{display:grid;grid-template-columns:1.12fr .88fr;gap:22px;align-items:stretch}
     .hero-copy,.hero-showcase,.quote,.price,.case,.testimonial,.final,.copy,.visual{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.022));border-radius:var(--radius);box-shadow:var(--shadow)}
     .hero-copy{padding:34px 34px 30px;min-height:740px;display:flex;flex-direction:column;justify-content:space-between}
@@ -92,8 +93,8 @@
 
     .section{padding:18px 0 84px}
     .section-head{max-width:780px;margin-bottom:24px}
-    .section-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,76px);line-height:.92;margin:0 0 14px}
-    .section-head p{color:var(--muted);line-height:1.95}
+    .section-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5vw,82px);line-height:.9;margin:0 0 14px}
+    .section-head p{color:var(--muted);line-height:1.95;max-width:720px}
     .tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0 24px}.tab{text-align:left;padding:18px;border-radius:20px}.tab b{display:block;font-size:15px;margin-bottom:4px}.tab span{font-size:13px;color:var(--muted)}
 
     .panel{display:none;grid-template-columns:1.02fr .98fr;gap:18px;align-items:stretch}.panel.active{display:grid}
@@ -119,8 +120,8 @@
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="topbar">
+  <div class="topbar">
+    <div class="wrap topbar-inner">
       <div class="brand">NeuroFlow<small>premium AI integrations for ambitious businesses</small></div>
       <div class="nav">
         <button class="nav-btn active" data-tab="automation">Automation</button>
@@ -130,7 +131,9 @@
         <button class="nav-btn" data-tab="consulting">Consulting</button>
       </div>
     </div>
+  </div>
 
+  <div class="wrap">
     <section class="hero reveal">
       <div class="hero-shell">
         <div class="hero-copy">
