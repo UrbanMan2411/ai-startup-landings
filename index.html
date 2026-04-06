@@ -4,17 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NeuroFlow — premium AI integrations for ambitious businesses</title>
-  <meta name="description" content="NeuroFlow — премиальный AI-партнёр для интеграции искусственного интеллекта и автоматизации бизнеса: AI automation, AI sales, support AI, voice agents и AI consulting." />
-  <meta name="keywords" content="ai интеграция бизнеса, автоматизация бизнеса ии, premium ai agency, ai sales, ai support, voice ai agents, ai consulting, внедрение искусственного интеллекта" />
+  <meta name="description" content="NeuroFlow — премиальный AI-партнёр для интеграции искусственного интеллекта и автоматизации бизнеса: AI automation, AI sales, AI support, voice agents и AI consulting." />
+  <meta name="keywords" content="ai интеграция бизнеса, автоматизация бизнеса ии, premium ai agency, ai sales, ai support, voice ai agents, ai consulting" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#05070c;
-      --bg-soft:#0b0f17;
+      --bg-soft:#0c1018;
       --panel:rgba(255,255,255,.045);
-      --panel-2:rgba(255,255,255,.03);
       --line:rgba(255,255,255,.08);
       --text:#f8f3ea;
       --muted:#aab1c1;
@@ -24,185 +23,99 @@
       --violet:#b796ff;
       --teal:#7fe6d5;
       --rose:#ffa4b7;
-      --shadow:0 30px 90px rgba(0,0,0,.45);
+      --shadow:0 30px 90px rgba(0,0,0,.42);
       --radius:30px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
-      margin:0;
-      font-family:Inter,system-ui,sans-serif;
-      color:var(--text);
+      margin:0;font-family:Inter,system-ui,sans-serif;color:var(--text);
       background:
-        radial-gradient(circle at 18% 18%, rgba(215,181,109,.10), transparent 18%),
-        radial-gradient(circle at 84% 18%, rgba(138,187,255,.12), transparent 24%),
-        radial-gradient(circle at 56% 76%, rgba(183,150,255,.09), transparent 24%),
+        radial-gradient(circle at 18% 18%, rgba(215,181,109,.09), transparent 18%),
+        radial-gradient(circle at 84% 18%, rgba(138,187,255,.11), transparent 24%),
+        radial-gradient(circle at 56% 76%, rgba(183,150,255,.08), transparent 24%),
         linear-gradient(180deg,#04060a 0%, #080c14 42%, #05070c 100%);
       overflow-x:hidden;
     }
     body::before{
-      content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;
+      content:"";position:fixed;inset:0;pointer-events:none;opacity:.2;
       background:
         repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 138px),
         repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 138px);
       mix-blend-mode:screen;
     }
     .wrap{width:min(1260px,calc(100% - 28px));margin:0 auto;position:relative;z-index:1}
-    .topbar{
-      position:sticky;top:0;z-index:50;
-      display:flex;justify-content:space-between;align-items:center;gap:20px;
-      padding:18px 0;background:rgba(4,6,10,.58);backdrop-filter:blur(20px);
-      border-bottom:1px solid rgba(255,255,255,.04)
-    }
+    .topbar{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;background:rgba(4,6,10,.58);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.04)}
     .brand{font-family:'Cormorant Garamond',serif;font-size:30px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft)}
     .brand small{display:block;font-family:Inter,sans-serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-top:4px}
     .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    .nav button,.tab{
-      border:1px solid var(--line);background:rgba(255,255,255,.028);color:var(--text);
-      cursor:pointer;transition:.25s ease
-    }
+    .nav button,.tab{border:1px solid var(--line);background:rgba(255,255,255,.028);color:var(--text);cursor:pointer;transition:.25s ease}
     .nav button{padding:11px 16px;border-radius:999px;font-size:13px;font-weight:700}
     .nav button.active,.nav button:hover,.tab.active,.tab:hover{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.15)}
 
-    .hero{
-      min-height:calc(100vh - 80px);
-      display:grid;grid-template-columns:1.02fr .98fr;gap:26px;align-items:center;
-      padding:36px 0 34px;
-    }
-    .eyebrow{
-      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;
-      border:1px solid var(--line);background:rgba(255,255,255,.028);
-      color:var(--gold-soft);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:20px;
-    }
-    h1{
-      margin:0 0 22px;max-width:760px;
-      font-family:'Cormorant Garamond',serif;font-size:clamp(62px,8vw,126px);line-height:.88;letter-spacing:-.04em
-    }
+    .hero{padding:36px 0 30px}
+    .hero-shell{display:grid;grid-template-columns:1.12fr .88fr;gap:22px;align-items:stretch}
+    .hero-copy,.hero-showcase,.quote,.price,.case,.testimonial,.final,.copy,.visual{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.022));border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-copy{padding:34px 34px 30px;min-height:740px;display:flex;flex-direction:column;justify-content:space-between}
+    .hero-top{max-width:760px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.028);color:var(--gold-soft);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+    h1{margin:0 0 20px;font-family:'Cormorant Garamond',serif;font-size:clamp(58px,7.6vw,118px);line-height:.9;letter-spacing:-.04em;max-width:760px}
     .gold{color:var(--gold-soft)}
-    .lead{max-width:640px;color:var(--muted);font-size:18px;line-height:1.95;margin-bottom:30px}
-    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
-    .btn,.ghost{
-      display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 24px;border-radius:999px;
-      text-decoration:none;font-weight:800;transition:.25s ease
-    }
+    .lead{max-width:620px;color:var(--muted);font-size:18px;line-height:1.95;margin-bottom:28px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px}
+    .btn,.ghost{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 24px;border-radius:999px;text-decoration:none;font-weight:800;transition:.25s ease}
     .btn{background:linear-gradient(135deg,#c89f4d 0%, #f3dc9d 100%);color:#13100b;box-shadow:0 18px 42px rgba(215,181,109,.24)}
     .ghost{background:rgba(255,255,255,.03);color:var(--text);border:1px solid var(--line)}
     .btn:hover,.ghost:hover{transform:translateY(-2px)}
-    .metrics{display:flex;gap:24px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+    .hero-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+    .metric{padding:16px 18px;border-radius:22px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05)}
+    .metric strong{display:block;font-size:26px;margin-bottom:6px;font-family:'Cormorant Garamond',serif}
+    .metric span{display:block;color:var(--muted);line-height:1.7;font-size:14px}
 
-    .hero-stage{
-      position:relative;min-height:760px;border-radius:36px;overflow:hidden;
-      border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);
-      background:
-        linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.025)),
-        radial-gradient(circle at 18% 16%, rgba(215,181,109,.18), transparent 20%),
-        linear-gradient(145deg,#0f141d 0%, #0a0f17 48%, #101722 100%);
-    }
-    .hero-stage::before,.hero-stage::after{content:"";position:absolute;border-radius:999px;filter:blur(10px)}
-    .hero-stage::before{width:340px;height:340px;right:-90px;top:-40px;background:radial-gradient(circle,rgba(240,216,154,.22),transparent 60%)}
-    .hero-stage::after{width:280px;height:280px;left:-70px;bottom:-20px;background:radial-gradient(circle,rgba(138,187,255,.18),transparent 60%)}
-    .hero-grid{position:absolute;inset:0;background:
-      linear-gradient(120deg,transparent 0%, rgba(255,255,255,.035) 46%, transparent 60%),
-      repeating-linear-gradient(90deg,rgba(255,255,255,.028) 0 1px,transparent 1px 130px),
-      repeating-linear-gradient(0deg,rgba(255,255,255,.02) 0 1px,transparent 1px 130px)}
-    .hero-ui{position:absolute;inset:26px}
-    .hero-copy{position:absolute;left:30px;top:30px;right:30px}
-    .hero-copy small{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:12px}
-    .hero-copy h2{margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-size:64px;line-height:.9;max-width:460px}
-    .hero-copy p{max-width:400px;color:#cad2e4;line-height:1.8;font-size:15px}
-    .floating-card{
-      position:absolute;left:30px;bottom:30px;width:min(320px,calc(100% - 60px));padding:22px;border-radius:26px;
-      background:rgba(6,8,12,.56);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(18px)
-    }
-    .floating-card strong{display:block;font-size:28px;margin-bottom:8px}
-    .floating-card span{display:block;color:var(--muted);font-size:14px;line-height:1.75}
-    .art-a,.art-b,.art-c,.art-d,.art-e{position:absolute;border-radius:36px;filter:drop-shadow(0 18px 40px rgba(0,0,0,.22));transition:.35s ease}
-    .art-a{right:74px;top:114px;width:176px;height:360px;background:linear-gradient(180deg,#182438,#f0d18b);transform:rotate(11deg)}
-    .art-b{right:196px;top:190px;width:120px;height:270px;border-radius:70px;background:linear-gradient(180deg,#162848,#8abbff);transform:rotate(-4deg)}
-    .art-c{right:278px;top:244px;width:88px;height:210px;border-radius:70px;background:linear-gradient(180deg,#191d36,#b796ff);transform:rotate(-16deg)}
-    .art-d{right:58px;bottom:118px;width:224px;height:88px;border-radius:999px;background:linear-gradient(90deg,#10192a,#263858)}
-    .art-ring{position:absolute;right:146px;top:96px;width:320px;height:320px;border-radius:999px;border:1px solid rgba(255,255,255,.08)}
+    .hero-showcase{padding:22px;display:grid;grid-template-rows:auto 1fr auto;gap:14px;min-height:740px;overflow:hidden}
+    .showcase-head small{display:block;color:var(--gold-soft);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+    .showcase-head h2{margin:0;font-family:'Cormorant Garamond',serif;font-size:42px;line-height:.94;max-width:420px}
+    .showcase-stage{position:relative;border-radius:26px;border:1px solid rgba(255,255,255,.08);overflow:hidden;background:linear-gradient(145deg,#0f141d 0%, #0a0f17 50%, #101722 100%);min-height:420px}
+    .showcase-stage::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 0%, rgba(255,255,255,.03) 46%, transparent 60%),repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 128px),repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 128px)}
+    .visual-badge{position:absolute;left:20px;top:18px;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+    .stack-card,.stack-card-2,.stack-card-3{position:absolute;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 48px rgba(0,0,0,.22)}
+    .stack-card{left:26px;top:78px;width:56%;height:46%;border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.03));padding:22px}
+    .stack-card h3{margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-size:34px;line-height:.95;max-width:230px}
+    .stack-card p{margin:0;color:#c8d0e0;font-size:14px;line-height:1.8;max-width:230px}
+    .stack-card-2{right:26px;top:110px;width:34%;height:56%;border-radius:30px;background:linear-gradient(180deg,var(--accentA,#173451),var(--accentB,#7fe6d5));transform:rotate(8deg)}
+    .stack-card-3{right:82px;bottom:32px;width:42%;height:18%;border-radius:999px;background:linear-gradient(90deg,#10192a,#263858)}
+    .showcase-notes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .note{padding:16px 18px;border-radius:22px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05)}
+    .note small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:8px}
+    .note strong{display:block;font-size:22px;line-height:1.15;margin-bottom:6px}
+    .note span{display:block;color:var(--muted);line-height:1.7;font-size:14px}
 
     .section{padding:18px 0 84px}
     .section-head{max-width:780px;margin-bottom:24px}
     .section-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,76px);line-height:.92;margin:0 0 14px}
     .section-head p{color:var(--muted);line-height:1.95}
+    .tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0 24px}.tab{text-align:left;padding:18px;border-radius:20px}.tab b{display:block;font-size:15px;margin-bottom:4px}.tab span{font-size:13px;color:var(--muted)}
 
-    .tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0 24px}
-    .tab{text-align:left;padding:18px;border-radius:20px}
-    .tab b{display:block;font-size:15px;margin-bottom:4px}
-    .tab span{font-size:13px;color:var(--muted)}
-
-    .panel{display:none;grid-template-columns:1.02fr .98fr;gap:18px;align-items:stretch}
-    .panel.active{display:grid}
-    .copy,.visual,.quote,.price,.case,.testimonial,.final{
-      border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.022));border-radius:var(--radius);box-shadow:var(--shadow)
-    }
-    .copy,.visual{padding:30px}
-    .copy h3{margin:0 0 14px;font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,72px);line-height:.92;max-width:680px}
-    .copy p{color:var(--muted);line-height:1.95}
-    .hook{font-size:24px;line-height:1.3;font-weight:800;margin:22px 0;color:#fff}
-    .bullets{display:grid;gap:12px;margin:24px 0}
-    .bullet{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)}
-    .seo{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:#9fadc3;line-height:1.8}
-
-    .visual{position:relative;overflow:hidden;min-height:620px}
-    .visual .label{position:absolute;left:26px;top:24px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.88}
-    .visual .statement{position:absolute;left:26px;right:26px;bottom:26px;font-family:'Cormorant Garamond',serif;font-size:46px;line-height:.93;max-width:500px}
-    .visual .plate,.visual .capsule,.visual .ring{position:absolute}
-    .visual .plate{border-radius:36px}
-    .visual .capsule{border-radius:999px}
-    .visual .ring{border-radius:999px;border:1px solid rgba(255,255,255,.10)}
+    .panel{display:none;grid-template-columns:1.02fr .98fr;gap:18px;align-items:stretch}.panel.active{display:grid}
+    .copy,.visual,.quote,.price,.case,.testimonial,.final{padding:28px}
+    .copy h3{margin:0 0 14px;font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,72px);line-height:.92;max-width:680px}.copy p{color:var(--muted);line-height:1.95}
+    .hook{font-size:24px;line-height:1.3;font-weight:800;margin:22px 0;color:#fff}.bullets{display:grid;gap:12px;margin:24px 0}.bullet{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)}.seo{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:#9fadc3;line-height:1.8}
+    .visual{position:relative;overflow:hidden;min-height:620px}.visual .label{position:absolute;left:26px;top:24px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.88}.visual .statement{position:absolute;left:26px;right:26px;bottom:26px;font-family:'Cormorant Garamond',serif;font-size:46px;line-height:.93;max-width:500px}.visual .plate,.visual .capsule,.visual .ring{position:absolute}.visual .plate{border-radius:36px}.visual .capsule{border-radius:999px}.visual .ring{border-radius:999px;border:1px solid rgba(255,255,255,.10)}
     .v1{background:linear-gradient(145deg,#0d1420,#102131)} .v1 .plate.a{right:70px;top:100px;width:182px;height:360px;background:linear-gradient(180deg,#173451,#7fe6d5);transform:rotate(10deg)} .v1 .plate.b{right:198px;top:182px;width:126px;height:250px;background:linear-gradient(180deg,#162848,#8abbff);transform:rotate(-5deg)} .v1 .capsule{left:54px;bottom:118px;width:256px;height:84px;background:linear-gradient(90deg,#17243a,#31527a)} .v1 .ring{right:138px;top:96px;width:320px;height:320px}
     .v2{background:linear-gradient(145deg,#140d23,#1d1433)} .v2 .plate.a{right:66px;top:102px;width:178px;height:352px;background:linear-gradient(180deg,#4c1d95,#d3afff);transform:rotate(11deg)} .v2 .plate.b{right:194px;top:182px;width:126px;height:246px;background:linear-gradient(180deg,#2b145f,#b796ff);transform:rotate(-5deg)} .v2 .capsule{left:54px;bottom:118px;width:254px;height:84px;background:linear-gradient(90deg,#2e1065,#52348d)} .v2 .ring{right:138px;top:96px;width:320px;height:320px}
     .v3{background:linear-gradient(145deg,#0d1718,#0f2321)} .v3 .plate.a{right:68px;top:102px;width:180px;height:354px;background:linear-gradient(180deg,#0f766e,#7fe6d5);transform:rotate(11deg)} .v3 .plate.b{right:196px;top:184px;width:124px;height:244px;background:linear-gradient(180deg,#155e75,#67e8f9);transform:rotate(-5deg)} .v3 .capsule{left:54px;bottom:118px;width:254px;height:84px;background:linear-gradient(90deg,#164e63,#2a6a72)} .v3 .ring{right:138px;top:96px;width:320px;height:320px}
     .v4{background:linear-gradient(145deg,#180d13,#241119)} .v4 .plate.a{right:68px;top:102px;width:180px;height:354px;background:linear-gradient(180deg,#9f1239,#ffb4c4);transform:rotate(11deg)} .v4 .plate.b{right:196px;top:184px;width:124px;height:244px;background:linear-gradient(180deg,#881337,#ff95aa);transform:rotate(-5deg)} .v4 .capsule{left:54px;bottom:118px;width:254px;height:84px;background:linear-gradient(90deg,#4c0519,#6a2034)} .v4 .ring{right:138px;top:96px;width:320px;height:320px}
     .v5{background:linear-gradient(145deg,#17130a,#211b0f)} .v5 .plate.a{right:68px;top:102px;width:180px;height:354px;background:linear-gradient(180deg,#7c5f18,#f0d89a);transform:rotate(11deg)} .v5 .plate.b{right:196px;top:184px;width:124px;height:244px;background:linear-gradient(180deg,#5b4715,#f6df98);transform:rotate(-5deg)} .v5 .capsule{left:54px;bottom:118px;width:254px;height:84px;background:linear-gradient(90deg,#2a2110,#46381c)} .v5 .ring{right:138px;top:96px;width:320px;height:320px}
 
-    .quote-row,.pricing-row,.cases-row,.testimonials-row{display:grid;gap:18px}
-    .quote-row{grid-template-columns:1.05fr .95fr;margin-top:24px}
-    .quote,.price,.case,.testimonial,.final{padding:28px}
-    .quote p{margin:0 0 16px;font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,54px);line-height:.95}
-    .quote span,.case p,.testimonial p,.price p,.final p{color:var(--muted);line-height:1.9}
+    .quote-row,.pricing-row,.cases-row,.testimonials-row{display:grid;gap:18px}.quote-row{grid-template-columns:1.05fr .95fr;margin-top:24px}.quote p{margin:0 0 16px;font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,54px);line-height:.95}.quote span,.case p,.testimonial p,.price p,.final p{color:var(--muted);line-height:1.9}
+    .pricing-row{grid-template-columns:repeat(3,1fr);margin-top:24px}.price.featured{border-color:rgba(215,181,109,.28);background:linear-gradient(180deg,rgba(215,181,109,.08),rgba(255,255,255,.025))}.price .tag,.case .tag,.testimonial .tag{display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;color:var(--gold-soft)}.price h4,.case h4,.testimonial h4{margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-size:34px;line-height:.95}.value{font-size:40px;font-weight:800;margin:18px 0;color:#fff}.mini-list{display:grid;gap:10px;margin-top:18px}.mini-list div{padding:12px 0;border-top:1px solid rgba(255,255,255,.06);color:#d2d8e5}
+    .cases-row{grid-template-columns:repeat(3,1fr);margin-top:24px}.case{min-height:260px}.case strong{display:block;font-size:44px;margin:14px 0 10px;font-family:'Cormorant Garamond',serif}
+    .testimonials-row{grid-template-columns:repeat(3,1fr);margin-top:24px}.testimonial h4{font-size:30px}
+    .final{margin-top:24px}.final h2{margin:0 0 14px;max-width:880px;font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5vw,80px);line-height:.92}.footer{padding:0 0 54px;color:#9aa5bb;font-size:13px}
 
-    .pricing-row{grid-template-columns:repeat(3,1fr);margin-top:24px}
-    .price.featured{border-color:rgba(215,181,109,.28);background:linear-gradient(180deg,rgba(215,181,109,.08),rgba(255,255,255,.025))}
-    .price .tag,.case .tag,.testimonial .tag{display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;color:var(--gold-soft)}
-    .price h4,.case h4,.testimonial h4{margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-size:34px;line-height:.95}
-    .value{font-size:40px;font-weight:800;margin:18px 0;color:#fff}
-    .mini-list{display:grid;gap:10px;margin-top:18px}
-    .mini-list div{padding:12px 0;border-top:1px solid rgba(255,255,255,.06);color:#d2d8e5}
-
-    .cases-row{grid-template-columns:repeat(3,1fr);margin-top:24px}
-    .case{min-height:260px}
-    .case strong{display:block;font-size:44px;margin:14px 0 10px;font-family:'Cormorant Garamond',serif}
-
-    .testimonials-row{grid-template-columns:repeat(3,1fr);margin-top:24px}
-    .testimonial h4{font-size:30px}
-
-    .final{margin-top:24px}
-    .final h2{margin:0 0 14px;max-width:880px;font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5vw,80px);line-height:.92}
-    .footer{padding:0 0 54px;color:#9aa5bb;font-size:13px}
-
-    .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease, transform .8s ease}
-    .reveal.visible{opacity:1;transform:none}
-
-    @media (max-width:1100px){
-      .hero,.panel,.quote-row,.pricing-row,.cases-row,.testimonials-row{grid-template-columns:1fr}
-      .tabs{grid-template-columns:1fr 1fr}
-      .hero-stage,.visual{min-height:480px}
-      .hero-copy h2{font-size:46px}
-    }
-    @media (max-width:720px){
-      .topbar{display:block}.brand{margin-bottom:12px}
-      .nav,.tabs{display:grid;grid-template-columns:1fr}
-      h1{font-size:clamp(48px,15vw,84px)}
-      .hero{padding-top:28px}
-      .hero-stage,.visual{min-height:390px}
-      .hero-copy h2{font-size:38px}
-      .visual .statement{font-size:32px}
-      .art-a,.art-b,.art-c,.art-d,.art-ring{transform:scale(.8)}
-    }
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease, transform .8s ease}.reveal.visible{opacity:1;transform:none}
+    @media (max-width:1100px){.hero-shell,.panel,.quote-row,.pricing-row,.cases-row,.testimonials-row{grid-template-columns:1fr}.tabs{grid-template-columns:1fr 1fr}.hero-copy,.hero-showcase,.visual{min-height:auto}.hero-bottom{grid-template-columns:1fr}.showcase-notes{grid-template-columns:1fr}.stack-card{width:62%}.stack-card-2{width:36%}}
+    @media (max-width:720px){.topbar{display:block}.brand{margin-bottom:12px}.nav,.tabs{display:grid;grid-template-columns:1fr}h1{font-size:clamp(48px,15vw,84px)}.hero-copy,.hero-showcase,.copy,.visual,.quote,.price,.case,.testimonial,.final{padding:22px}.stack-card{left:18px;top:70px;width:62%;padding:16px}.stack-card h3{font-size:28px}.stack-card p{max-width:none}.stack-card-2{right:18px;top:104px;width:34%}.stack-card-3{right:44px;left:auto;width:44%;height:16%}.visual .statement{font-size:32px}}
   </style>
 </head>
 <body>
@@ -219,38 +132,41 @@
     </div>
 
     <section class="hero reveal">
-      <div>
-        <span class="eyebrow">AI integration architecture for growth</span>
-        <h1>Премиальный AI-партнёр для компаний, которым нужен <span class="gold">не шум вокруг нейросетей, а система роста.</span></h1>
-        <p class="lead">NeuroFlow строит дорогую, цельную архитектуру AI-внедрения: автоматизация процессов, AI sales, AI support, voice agents и стратегический консалтинг — в одном бренде и одном коммерческом языке.</p>
-        <div class="cta-row">
-          <a class="btn" href="#solutions">Посмотреть решения</a>
-          <a class="ghost" href="#pricing">Посмотреть форматы работы</a>
+      <div class="hero-shell">
+        <div class="hero-copy">
+          <div class="hero-top">
+            <span class="eyebrow">AI integration architecture for growth</span>
+            <h1>Нужен <span class="gold">абсолютно новый контур роста</span>, а не просто ещё один “AI-инструмент”?</h1>
+            <p class="lead">NeuroFlow проектирует AI-внедрение как дорогую продуктовую систему: автоматизация процессов, AI sales, AI support, voice agents и стратегический консалтинг — в одном сильном бренде и одной ясной бизнес-логике.</p>
+            <div class="cta-row">
+              <a class="btn" href="#solutions">Посмотреть решения</a>
+              <a class="ghost" href="#pricing">Смотреть pricing</a>
+            </div>
+          </div>
+          <div class="hero-bottom">
+            <div class="metric"><strong>AI Automation</strong><span>Убираем ручную рутину и операционные провалы.</span></div>
+            <div class="metric"><strong>AI Sales</strong><span>Не даём лидам теряться между людьми и касаниями.</span></div>
+            <div class="metric"><strong>AI Consulting</strong><span>Строим roadmap, чтобы внедрение не умерло в хаосе.</span></div>
+          </div>
         </div>
-        <div class="metrics">
-          <span>• premium positioning</span>
-          <span>• SEO-ready offer architecture</span>
-          <span>• productized AI services</span>
-          <span>• launch-ready landing system</span>
-        </div>
-      </div>
 
-      <div class="hero-stage reveal">
-        <div class="hero-grid"></div>
-        <div class="hero-ui" id="hero-art">
-          <div class="hero-copy">
+        <div class="hero-showcase">
+          <div class="showcase-head">
             <small id="hero-label">Automation infrastructure</small>
             <h2 id="hero-title">Сначала порядок в процессах. Потом скорость.</h2>
-            <p id="hero-sub">Каждое решение внутри платформы продаёт одну сильную бизнес-идею и закрывает одну конкретную боль руководителя.</p>
           </div>
-          <div class="art-ring"></div>
-          <div class="art-a"></div>
-          <div class="art-b"></div>
-          <div class="art-c"></div>
-          <div class="art-d"></div>
-          <div class="floating-card">
-            <strong id="hero-strong">AI systems that feel expensive</strong>
-            <span id="hero-note">Не набор карточек и ботов, а цельная коммерческая структура для роста, сервиса и операционной эффективности.</span>
+          <div class="showcase-stage" id="hero-art">
+            <div class="visual-badge">NeuroFlow system</div>
+            <div class="stack-card">
+              <h3 id="hero-strong">AI systems that feel expensive</h3>
+              <p id="hero-sub">Каждое направление продаёт не фичи, а один сильный бизнес-результат и один ясный сценарий внедрения.</p>
+            </div>
+            <div class="stack-card-2"></div>
+            <div class="stack-card-3"></div>
+          </div>
+          <div class="showcase-notes">
+            <div class="note"><small>Positioning</small><strong id="hero-note">Не набор карточек и ботов</strong><span>А цельная коммерческая структура для роста, сервиса и операционной эффективности.</span></div>
+            <div class="note"><small>Offer logic</small><strong>5 входов в 1 проблему</strong><span>Рост, поддержка, продажи, голос и внедрение упакованы как единая premium-система.</span></div>
           </div>
         </div>
       </div>
@@ -258,8 +174,8 @@
 
     <section class="section reveal" id="solutions">
       <div class="section-head">
-        <h2>Один сайт. Пять AI-направлений. Разный коммерческий вход в одну и ту же проблему роста.</h2>
-        <p>Архитектура собрана как на сильных референсах: мощный hero, затем выбор продуктового угла, потом visual proof, кейсы, социальное доказательство, pricing и финальный CTA.</p>
+        <h2>Новая архитектура: чистый hero, выбор направления, потом proof, кейсы, pricing и social trust.</h2>
+        <p>Ушли от перегруженного art-direction в первом экране. Теперь текст полностью читается, а визуальный блок работает как controlled showcase, а не как шум поверх смысла.</p>
       </div>
 
       <div class="tabs">
@@ -270,206 +186,24 @@
         <button class="tab" data-tab="consulting"><b>AI Consulting</b><span>Внедрять системно</span></button>
       </div>
 
-      <div class="panel active reveal" id="automation">
-        <div class="copy">
-          <span class="eyebrow" style="color:var(--teal)">AI business automation</span>
-          <h3>Бизнес растёт быстрее, когда рутина исчезает.</h3>
-          <p>Автоматизируем заявки, CRM, документы, маршрутизацию задач и внутренние процессы, чтобы компания перестала тратить часы на механические действия и начала масштабироваться управляемо.</p>
-          <div class="hook">Hook: «Сотрудники больше не делают то, что можно не делать руками»</div>
-          <div class="bullets">
-            <div class="bullet">AI-автоматизация заявок, CRM и repetitive operations</div>
-            <div class="bullet">Связка мессенджеров, таблиц, баз знаний, CRM и внутренних процессов</div>
-            <div class="bullet">Снижение операционной нагрузки и финансовых потерь на ручных ошибках</div>
-          </div>
-          <div class="seo">SEO: AI автоматизация бизнеса, внедрение ИИ в бизнес, автоматизация бизнес-процессов, AI интеграция CRM, искусственный интеллект для бизнеса.</div>
-        </div>
-        <div class="visual v1"><div class="label">automation system</div><div class="ring"></div><div class="plate a"></div><div class="plate b"></div><div class="capsule"></div><div class="statement">Из тяжёлой операционки — в систему, которая работает почти без касаний.</div></div>
-      </div>
-
-      <div class="panel reveal" id="sales">
-        <div class="copy">
-          <span class="eyebrow" style="color:var(--violet)">AI sales pipeline</span>
-          <h3>Следующий сильный продавец — это система, которая не забывает дожимать.</h3>
-          <p>Строим AI-воронку продаж: квалификация лидов, follow-up, сегментация, CRM-first логика и сценарии, которые не дают заявкам умирать между касаниями.</p>
-          <div class="hook">Hook: «Ни один лид не должен умереть просто потому, что менеджер устал»</div>
-          <div class="bullets">
-            <div class="bullet">Квалификация лидов и автоматическая маршрутизация</div>
-            <div class="bullet">Follow-up без провалов и потерянных касаний</div>
-            <div class="bullet">Рост конверсии без мгновенного найма нового отдела</div>
-          </div>
-          <div class="seo">SEO: AI отдел продаж, AI sales automation, автоматизация продаж, квалификация лидов, искусственный интеллект для отдела продаж.</div>
-        </div>
-        <div class="visual v2"><div class="label">sales engine</div><div class="ring"></div><div class="plate a"></div><div class="plate b"></div><div class="capsule"></div><div class="statement">Воронка не должна зависеть от памяти, усталости и человеческого провала в дисциплине.</div></div>
-      </div>
-
-      <div class="panel reveal" id="support">
-        <div class="copy">
-          <span class="eyebrow" style="color:var(--teal)">AI support desk</span>
-          <h3>Поддержка не должна ломаться ночью, в выходные и на пике заявок.</h3>
-          <p>Внедряем AI support: ответы 24/7, база знаний, маршрутизация обращений и разгрузка первой линии без ощущения бездушного “бота вместо сервиса”.</p>
-          <div class="hook">Hook: «Ваш клиент не должен ждать человека, чтобы получить нормальный ответ»</div>
-          <div class="bullets">
-            <div class="bullet">Мгновенные ответы на типовые обращения</div>
-            <div class="bullet">Обучение на базе FAQ, документации и реальных диалогов</div>
-            <div class="bullet">Escalation-логика для сложных кейсов</div>
-          </div>
-          <div class="seo">SEO: AI поддержка клиентов, AI чат-бот для бизнеса, автоматизация customer support, AI help desk, искусственный интеллект для клиентского сервиса.</div>
-        </div>
-        <div class="visual v3"><div class="label">support intelligence</div><div class="ring"></div><div class="plate a"></div><div class="plate b"></div><div class="capsule"></div><div class="statement">Сильная поддержка масштабируется быстрее, чем растёт очередь заявок.</div></div>
-      </div>
-
-      <div class="panel reveal" id="voice">
-        <div class="copy">
-          <span class="eyebrow" style="color:var(--rose)">voice AI agents</span>
-          <h3>Если бизнесу звонят, значит голос можно автоматизировать.</h3>
-          <p>Запускаем voice agents для приёма звонков, записи клиентов, подтверждений, автообзвонов и ответов на частые вопросы — без ощущения дешёвого call-bot опыта.</p>
-          <div class="hook">Hook: «Ни один звонок не должен уходить в пустоту»</div>
-          <div class="bullets">
-            <div class="bullet">Входящие звонки, сбор данных и routing</div>
-            <div class="bullet">Запись клиентов и автоматизация call-flow для локального бизнеса</div>
-            <div class="bullet">Автообзвоны, подтверждения и реактивация базы</div>
-          </div>
-          <div class="seo">SEO: голосовой AI агент, AI для звонков, voice AI agents, автоматизация колл-центра, AI receptionist, автообзвон.</div>
-        </div>
-        <div class="visual v4"><div class="label">voice automation</div><div class="ring"></div><div class="plate a"></div><div class="plate b"></div><div class="capsule"></div><div class="statement">Там, где бизнес не взял трубку, он часто не взял деньги.</div></div>
-      </div>
-
-      <div class="panel reveal" id="consulting">
-        <div class="copy">
-          <span class="eyebrow" style="color:var(--gold)">AI consulting</span>
-          <h3>Большинство AI-проектов проваливаются ещё до внедрения — на этапе туманной постановки задачи.</h3>
-          <p>Мы делаем аудит процессов, roadmap, pilot, интеграции и запуск под ключ. Не “подключаем нейросеть”, а собираем сильную систему, понятную бизнесу и управляемую командой.</p>
-          <div class="hook">Hook: «Компании теряют не из-за отсутствия ИИ, а из-за отсутствия плана внедрения»</div>
-          <div class="bullets">
-            <div class="bullet">Аудит процессов и выбор зон максимального эффекта</div>
-            <div class="bullet">Pilot first: рабочая гипотеза до масштабирования</div>
-            <div class="bullet">Стратегическое внедрение вместо хаотичного AI-эксперимента</div>
-          </div>
-          <div class="seo">SEO: AI консалтинг, внедрение искусственного интеллекта в бизнес, AI стратегия для компании, AI интеграция под ключ, автоматизация бизнеса.</div>
-        </div>
-        <div class="visual v5"><div class="label">strategy & execution</div><div class="ring"></div><div class="plate a"></div><div class="plate b"></div><div class="capsule"></div><div class="statement">Хороший AI-проект начинается не с модели, а с ясной бизнес-логики.</div></div>
-      </div>
+      <div class="panel active reveal" id="automation"><div class="copy"><span class="eyebrow" style="color:var(--teal)">AI business automation</span><h3>Бизнес растёт быстрее, когда рутина исчезает.</h3><p>Автоматизируем заявки, CRM, документы, маршрутизацию задач и внутренние процессы, чтобы компания перестала тратить часы на механические действия и начала масштабироваться управляемо.</p><div class="hook">Hook: «Сотрудники больше не делают то, что можно не делать руками»</div><div class="bullets"><div class="bullet">AI-автоматизация заявок, CRM и repetitive operations</div><div class="bullet">Связка мессенджеров, таблиц, баз знаний, CRM и внутренних процессов</div><div class="bullet">Снижение операционной нагрузки и финансовых потерь на ручных ошибках</div></div><div class="seo">SEO: AI автоматизация бизнеса, внедрение ИИ в бизнес, автоматизация бизнес-процессов, AI интеграция CRM, искусственный интеллект для бизнеса.</div></div><div class="visual v1"><div class="label">automation system</div><div class="ring"></div><div class="plate a"></div><div class="plate b"></div><div class="capsule"></div><div class="statement">Из тяжёлой операционки — в систему, которая работает почти без касаний.</div></div></div>
+      <div class="panel reveal" id="sales"><div class="copy"><span class="eyebrow" style="color:var(--violet)">AI sales pipeline</span><h3>Следующий сильный продавец — это система, которая не забывает дожимать.</h3><p>Строим AI-воронку продаж: квалификация лидов, follow-up, сегментация, CRM-first логика и сценарии, которые не дают заявкам умирать между касаниями.</p><div class="hook">Hook: «Ни один лид не должен умереть просто потому, что менеджер устал»</div><div class="bullets"><div class="bullet">Квалификация лидов и автоматическая маршрутизация</div><div class="bullet">Follow-up без провалов и потерянных касаний</div><div class="bullet">Рост конверсии без мгновенного найма нового отдела</div></div><div class="seo">SEO: AI отдел продаж, AI sales automation, автоматизация продаж, квалификация лидов, искусственный интеллект для отдела продаж.</div></div><div class="visual v2"><div class="label">sales engine</div><div class="ring"></div><div class="plate a"></div><div class="plate b"></div><div class="capsule"></div><div class="statement">Воронка не должна зависеть от памяти, усталости и человеческого провала в дисциплине.</div></div></div>
+      <div class="panel reveal" id="support"><div class="copy"><span class="eyebrow" style="color:var(--teal)">AI support desk</span><h3>Поддержка не должна ломаться ночью, в выходные и на пике заявок.</h3><p>Внедряем AI support: ответы 24/7, база знаний, маршрутизация обращений и разгрузка первой линии без ощущения бездушного “бота вместо сервиса”.</p><div class="hook">Hook: «Ваш клиент не должен ждать человека, чтобы получить нормальный ответ»</div><div class="bullets"><div class="bullet">Мгновенные ответы на типовые обращения</div><div class="bullet">Обучение на базе FAQ, документации и реальных диалогов</div><div class="bullet">Escalation-логика для сложных кейсов</div></div><div class="seo">SEO: AI поддержка клиентов, AI чат-бот для бизнеса, автоматизация customer support, AI help desk, искусственный интеллект для клиентского сервиса.</div></div><div class="visual v3"><div class="label">support intelligence</div><div class="ring"></div><div class="plate a"></div><div class="plate b"></div><div class="capsule"></div><div class="statement">Сильная поддержка масштабируется быстрее, чем растёт очередь заявок.</div></div></div>
+      <div class="panel reveal" id="voice"><div class="copy"><span class="eyebrow" style="color:var(--rose)">voice AI agents</span><h3>Если бизнесу звонят, значит голос можно автоматизировать.</h3><p>Запускаем voice agents для приёма звонков, записи клиентов, подтверждений, автообзвонов и ответов на частые вопросы — без ощущения дешёвого call-bot опыта.</p><div class="hook">Hook: «Ни один звонок не должен уходить в пустоту»</div><div class="bullets"><div class="bullet">Входящие звонки, сбор данных и routing</div><div class="bullet">Запись клиентов и автоматизация call-flow для локального бизнеса</div><div class="bullet">Автообзвоны, подтверждения и реактивация базы</div></div><div class="seo">SEO: голосовой AI агент, AI для звонков, voice AI agents, автоматизация колл-центра, AI receptionist, автообзвон.</div></div><div class="visual v4"><div class="label">voice automation</div><div class="ring"></div><div class="plate a"></div><div class="plate b"></div><div class="capsule"></div><div class="statement">Там, где бизнес не взял трубку, он часто не взял деньги.</div></div></div>
+      <div class="panel reveal" id="consulting"><div class="copy"><span class="eyebrow" style="color:var(--gold)">AI consulting</span><h3>Большинство AI-проектов проваливаются ещё до внедрения — на этапе туманной постановки задачи.</h3><p>Мы делаем аудит процессов, roadmap, pilot, интеграции и запуск под ключ. Не “подключаем нейросеть”, а собираем сильную систему, понятную бизнесу и управляемую командой.</p><div class="hook">Hook: «Компании теряют не из-за отсутствия ИИ, а из-за отсутствия плана внедрения»</div><div class="bullets"><div class="bullet">Аудит процессов и выбор зон максимального эффекта</div><div class="bullet">Pilot first: рабочая гипотеза до масштабирования</div><div class="bullet">Стратегическое внедрение вместо хаотичного AI-эксперимента</div></div><div class="seo">SEO: AI консалтинг, внедрение искусственного интеллекта в бизнес, AI стратегия для компании, AI интеграция под ключ, автоматизация бизнеса.</div></div><div class="visual v5"><div class="label">strategy & execution</div><div class="ring"></div><div class="plate a"></div><div class="plate b"></div><div class="capsule"></div><div class="statement">Хороший AI-проект начинается не с модели, а с ясной бизнес-логики.</div></div></div>
     </section>
 
-    <section class="section reveal">
-      <div class="quote-row">
-        <div class="quote">
-          <p>«Сильный AI-бренд продаёт не технологию, а чувство управляемого роста.»</p>
-          <span>Поэтому сайт должен выглядеть как дорогой strategic launch, а не как случайная сборка из карточек и buzzword-блоков.</span>
-        </div>
-        <div class="quote">
-          <p>«Первый экран должен обещать масштаб, а не просто перечислять функции.»</p>
-          <span>Мы строим визуальную подачу вокруг статуса, структуры и ощущения, что компания уже на шаг впереди своего рынка.</span>
-        </div>
-      </div>
-    </section>
+    <section class="section reveal"><div class="quote-row"><div class="quote"><p>«Сильный AI-бренд продаёт не технологию, а чувство управляемого роста.»</p><span>Поэтому сайт должен выглядеть как strategic launch, а не как случайная сборка из карточек и buzzword-блоков.</span></div><div class="quote"><p>«Первый экран должен обещать масштаб, а не просто перечислять функции.»</p><span>Теперь hero читабелен, а визуал служит подаче, а не мешает ей.</span></div></div></section>
 
-    <section class="section reveal">
-      <div class="section-head">
-        <h2>Case logic, not filler blocks.</h2>
-        <p>Ниже — не декоративные кейсы, а формат социального доказательства: цифры, углы применения и контекст, который помогает продавать внедрение через реальную бизнес-ценность.</p>
-      </div>
-      <div class="cases-row">
-        <div class="case">
-          <span class="tag">case 01</span>
-          <h4>Operations</h4>
-          <strong>-41%</strong>
-          <p>Снижение ручной нагрузки после связки заявок, CRM, воронок и внутренней маршрутизации задач.</p>
-        </div>
-        <div class="case">
-          <span class="tag">case 02</span>
-          <h4>Sales</h4>
-          <strong>+27%</strong>
-          <p>Рост конверсии за счёт AI-follow-up, квалификации лидов и устранения “мертвых зон” воронки.</p>
-        </div>
-        <div class="case">
-          <span class="tag">case 03</span>
-          <h4>Support</h4>
-          <strong>24/7</strong>
-          <p>Покрытие первой линии поддержки без раздувания смен и без потери скорости реакции.</p>
-        </div>
-      </div>
-    </section>
+    <section class="section reveal"><div class="section-head"><h2>Case logic, not filler blocks.</h2><p>Кейсы помогают продавать внедрение через понятный бизнес-результат, а не через абстрактные обещания про “инновации”.</p></div><div class="cases-row"><div class="case"><span class="tag">case 01</span><h4>Operations</h4><strong>-41%</strong><p>Снижение ручной нагрузки после связки заявок, CRM, воронок и внутренней маршрутизации задач.</p></div><div class="case"><span class="tag">case 02</span><h4>Sales</h4><strong>+27%</strong><p>Рост конверсии за счёт AI-follow-up, квалификации лидов и устранения “мертвых зон” воронки.</p></div><div class="case"><span class="tag">case 03</span><h4>Support</h4><strong>24/7</strong><p>Покрытие первой линии поддержки без раздувания смен и без потери скорости реакции.</p></div></div></section>
 
-    <section class="section reveal" id="pricing">
-      <div class="section-head">
-        <h2>Productized pricing for premium AI delivery.</h2>
-        <p>Чтобы продавать дорого, предложение должно быть упаковано. Не “что-нибудь внедрим”, а понятные форматы работы с понятным уровнем глубины.</p>
-      </div>
-      <div class="pricing-row">
-        <div class="price">
-          <span class="tag">Entry</span>
-          <h4>AI Audit</h4>
-          <p>Быстрый стратегический вход в тему: где деньги, где потери, где смысл внедрения.</p>
-          <div class="value">1–2 weeks</div>
-          <div class="mini-list">
-            <div>Диагностика процессов</div>
-            <div>Карта точек AI-эффекта</div>
-            <div>Roadmap первого запуска</div>
-          </div>
-        </div>
-        <div class="price featured">
-          <span class="tag">Core offer</span>
-          <h4>AI Launch System</h4>
-          <p>Основной коммерческий пакет: продуктовая логика, интеграции, pilot и боевой запуск.</p>
-          <div class="value">30–45 days</div>
-          <div class="mini-list">
-            <div>Automation + AI logic</div>
-            <div>CRM / support / sales integration</div>
-            <div>Внедрение под ключ</div>
-          </div>
-        </div>
-        <div class="price">
-          <span class="tag">Premium</span>
-          <h4>AI Growth Partner</h4>
-          <p>Долгий контур: развитие нескольких направлений, оптимизация и масштабирование AI как функции бизнеса.</p>
-          <div class="value">retainer</div>
-          <div class="mini-list">
-            <div>Новые AI-сценарии по отделам</div>
-            <div>Оптимизация и growth-итерации</div>
-            <div>Поддержка и масштабирование</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="section reveal" id="pricing"><div class="section-head"><h2>Productized pricing for premium AI delivery.</h2><p>Чтобы продавать дорого, предложение должно быть упаковано: от стратегического входа до системного retainer-формата.</p></div><div class="pricing-row"><div class="price"><span class="tag">Entry</span><h4>AI Audit</h4><p>Быстрый стратегический вход: где деньги, где потери, где смысл внедрения.</p><div class="value">1–2 weeks</div><div class="mini-list"><div>Диагностика процессов</div><div>Карта точек AI-эффекта</div><div>Roadmap первого запуска</div></div></div><div class="price featured"><span class="tag">Core offer</span><h4>AI Launch System</h4><p>Основной коммерческий пакет: архитектура, интеграции, pilot и боевой запуск.</p><div class="value">30–45 days</div><div class="mini-list"><div>Automation + AI logic</div><div>CRM / support / sales integration</div><div>Внедрение под ключ</div></div></div><div class="price"><span class="tag">Premium</span><h4>AI Growth Partner</h4><p>Долгий контур: новые AI-сценарии, оптимизация и масштабирование как постоянная функция.</p><div class="value">retainer</div><div class="mini-list"><div>AI-сценарии по отделам</div><div>Growth-итерации</div><div>Поддержка и масштабирование</div></div></div></div></section>
 
-    <section class="section reveal">
-      <div class="section-head">
-        <h2>Testimonials with weight.</h2>
-        <p>Нужны не безликие “нам понравилось”, а формулировки, которые усиливают perception: ясность, премиальность, скорость и управляемый результат.</p>
-      </div>
-      <div class="testimonials-row">
-        <div class="testimonial">
-          <span class="tag">Founder</span>
-          <h4>«Впервые AI-проект выглядел как зрелая бизнес-система, а не как эксперимент ради тренда.»</h4>
-          <p>NeuroFlow помог собрать структуру внедрения так, чтобы её понимали и собственник, и команда, и продажи.</p>
-        </div>
-        <div class="testimonial">
-          <span class="tag">COO</span>
-          <h4>«Самое сильное — не только автоматизация, а ощущение контроля и предсказуемости.»</h4>
-          <p>Когда процессы собраны правильно, компания перестаёт тушить пожары и начинает работать в ритме роста.</p>
-        </div>
-        <div class="testimonial">
-          <span class="tag">Commercial Lead</span>
-          <h4>«Мы перестали терять лидов в паузах между людьми и касаниями.»</h4>
-          <p>AI-воронка закрыла самый дорогой разрыв — между входящим интересом и реальной оплатой.</p>
-        </div>
-      </div>
-    </section>
+    <section class="section reveal"><div class="section-head"><h2>Testimonials with weight.</h2><p>Не безликие отзывы, а формулировки, которые поднимают perception бренда, зрелости и управляемости результата.</p></div><div class="testimonials-row"><div class="testimonial"><span class="tag">Founder</span><h4>«Впервые AI-проект выглядел как зрелая бизнес-система, а не как эксперимент ради тренда.»</h4><p>NeuroFlow помог собрать структуру внедрения так, чтобы её понимали и собственник, и команда, и продажи.</p></div><div class="testimonial"><span class="tag">COO</span><h4>«Самое сильное — не только автоматизация, а ощущение контроля и предсказуемости.»</h4><p>Когда процессы собраны правильно, компания перестаёт тушить пожары и начинает работать в ритме роста.</p></div><div class="testimonial"><span class="tag">Commercial Lead</span><h4>«Мы перестали терять лидов в паузах между людьми и касаниями.»</h4><p>AI-воронка закрыла самый дорогой разрыв — между входящим интересом и реальной оплатой.</p></div></div></section>
 
-    <section class="section reveal" id="contact">
-      <div class="final">
-        <span class="eyebrow">Final CTA</span>
-        <h2>Нужен сайт, который не просто рассказывает про AI, а <span style="color:var(--gold-soft)">дорого продаёт идею внедрения</span>?</h2>
-        <p>NeuroFlow соединяет бренд-уровень, продуктовую архитектуру, SEO-намерение и коммерческий язык в один launch-ready фронт. Это уже не просто лендинг — это витрина системного AI-бизнеса.</p>
-        <div class="cta-row">
-          <a class="btn" href="#">Запросить AI-аудит</a>
-          <a class="ghost" href="https://github.com/UrbanMan2411/ai-startup-landings">GitHub Repo</a>
-        </div>
-      </div>
-    </section>
+    <section class="section reveal" id="contact"><div class="final"><span class="eyebrow">Final CTA</span><h2>Нужен сайт, который не просто рассказывает про AI, а <span style="color:var(--gold-soft)">дорого продаёт идею внедрения</span>?</h2><p>NeuroFlow соединяет бренд-уровень, продуктовую архитектуру, SEO-намерение и коммерческий язык в один launch-ready фронт. Теперь с чистым hero, более строгой структурой и сильной visual logic.</p><div class="cta-row"><a class="btn" href="#">Запросить AI-аудит</a><a class="ghost" href="https://github.com/UrbanMan2411/ai-startup-landings">GitHub Repo</a></div></div></section>
 
-    <div class="footer">NeuroFlow • premium AI integrations • reference-driven architecture • GitHub Pages live</div>
+    <div class="footer">NeuroFlow • redesigned hero architecture • GitHub Pages live</div>
   </div>
 
   <script>
@@ -482,11 +216,11 @@
     const heroNote = document.getElementById('hero-note');
     const heroArt = document.getElementById('hero-art');
     const states = {
-      automation:['Automation infrastructure','Сначала порядок в процессах. Потом скорость.','Каждое решение внутри платформы продаёт одну сильную бизнес-идею и закрывает одну конкретную боль руководителя.','AI systems that remove operational drag','Решение для компаний, где люди слишком долго заняты тем, что давно пора автоматизировать.', ['#173451','#7fe6d5']],
-      sales:['Sales intelligence layer','Каждый лид должен дожиматься системой.','AI sales убирает потери между первым касанием и оплатой и превращает follow-up в управляемую механику.','Revenue should not leak in the pipeline','Деньги часто теряются не на продукте, а между фоллоуапом, дисциплиной и CRM-хаосом.', ['#4c1d95','#d3afff']],
-      support:['Support intelligence','Сильная поддержка не спит и не тонет.','AI support закрывает типовые вопросы 24/7 и разгружает команду без ощущения плохого сервиса.', 'Client service should scale elegantly','Если рост заявок ломает поддержку, значит в системе слишком много ручной нагрузки.', ['#0f766e','#7fe6d5']],
-      voice:['Voice interface','Голос — тоже интерфейс продаж и сервиса.','Voice agents принимают звонки, записывают, подтверждают и ведут call-flow без пауз.', 'Calls are revenue events','Бизнесу важен не просто номер телефона, а управляемая голосовая точка контакта.', ['#9f1239','#ffb4c4']],
-      consulting:['Consulting & roadmap','Сначала roadmap. Потом внедрение.','AI consulting нужен, чтобы проект не умер ещё на этапе неопределённости и расплывчатой постановки задачи.', 'Clarity before implementation','Премиальное внедрение начинается не с хаоса инструментов, а с сильной архитектуры решений.', ['#7c5f18','#f0d89a']]
+      automation:['Automation infrastructure','Сначала порядок в процессах. Потом скорость.','Каждое направление продаёт один сильный бизнес-результат и один ясный сценарий внедрения.','AI systems that feel expensive','Не набор карточек и ботов, а цельная коммерческая структура для роста и операционной эффективности.',['#173451','#7fe6d5']],
+      sales:['Sales intelligence layer','Каждый лид должен дожиматься системой.','AI sales убирает потери между первым касанием и оплатой и превращает follow-up в управляемую механику.','Revenue should not leak in the pipeline','Деньги часто теряются не на продукте, а между фоллоуапом, дисциплиной и CRM-хаосом.',['#4c1d95','#d3afff']],
+      support:['Support intelligence','Сильная поддержка не спит и не тонет.','AI support закрывает типовые вопросы 24/7 и разгружает команду без ощущения плохого сервиса.','Client service should scale elegantly','Если рост заявок ломает поддержку, значит в системе слишком много ручной нагрузки.',['#0f766e','#7fe6d5']],
+      voice:['Voice interface','Голос — тоже интерфейс продаж и сервиса.','Voice agents принимают звонки, записывают, подтверждают и ведут call-flow без пауз.','Calls are revenue events','Бизнесу важен не просто номер телефона, а управляемая голосовая точка контакта.',['#9f1239','#ffb4c4']],
+      consulting:['Consulting & roadmap','Сначала roadmap. Потом внедрение.','AI consulting нужен, чтобы проект не умер ещё на этапе неопределённости и расплывчатой постановки задачи.','Clarity before implementation','Премиальное внедрение начинается не с хаоса инструментов, а с сильной архитектуры решений.',['#7c5f18','#f0d89a']]
     };
     function activate(name){
       tabs.forEach(t=>t.classList.toggle('active', t.dataset.tab===name));
@@ -499,17 +233,12 @@
       heroNote.textContent = s[4];
       heroArt.style.setProperty('--accentA', s[5][0]);
       heroArt.style.setProperty('--accentB', s[5][1]);
-      const a = heroArt.querySelector('.art-a');
-      const b = heroArt.querySelector('.art-b');
-      a.style.background = `linear-gradient(180deg, ${s[5][0]}, ${s[5][1]})`;
-      b.style.background = `linear-gradient(180deg, ${s[5][0]}, ${name==='automation' ? '#8abbff' : name==='sales' ? '#b796ff' : name==='support' ? '#67e8f9' : name==='voice' ? '#ff95aa' : '#f6df98'})`;
+      heroArt.querySelector('.stack-card-2').style.background = `linear-gradient(180deg, ${s[5][0]}, ${s[5][1]})`;
     }
     tabs.forEach(t=>t.addEventListener('click', ()=>activate(t.dataset.tab)));
 
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){ entry.target.classList.add('visible'); }
-      });
+      entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.14 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
